@@ -6,7 +6,7 @@ document.querySelector('form').addEventListener('submit', (e) => {
 
    message.textContent = 'Loading...'
 
-   fetch(`http://localhost:3000/weather?city=${location}`)
+   fetch(`/weather?city=${location}`)
       .then((response) => {
          return response.json()
       })
