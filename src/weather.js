@@ -11,10 +11,9 @@ const forecast = (city, callback) => {
       } else if (body.error) {
          callback('unable to find location', undefined)
       } else {
-         // console.log(body)
          callback(
             undefined,
-            `It is currently ${body.current.temperature}°C in ${body.location.name}, ${body.location.region}, ${body.location.country}. There is ${body.current.precip}% chance of rain.`
+            `It is currently ${body.current.temperature}°C in ${body.location.name}, ${body.location.region}, ${body.location.country}. There is ${body.current.precip}% chance of rain with ${body.current.humidity}% humidity.`
          )
       }
    })
